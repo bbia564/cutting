@@ -9,11 +9,13 @@ import 'package:cutting/pages/xi_main/xi_main_binding.dart';
 import 'package:cutting/pages/xi_main/xi_main_view.dart';
 import 'package:cutting/pages/xi_second/xi_second_binding.dart';
 import 'package:cutting/pages/xi_second/xi_second_view.dart';
-import 'package:cutting/router/router_pages.dart';
-import 'package:cutting/router/router_titles.dart';
+import 'package:cutting/pages/xi_way/xi_way_binding.dart';
+import 'package:cutting/pages/xi_way/xi_way_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+
+import 'db_xi/xi_real.dart';
 
 Color primaryColor = const Color(0xff6f3cff);
 Color bgColor = const Color(0xfff4f3f9);
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Hill,
-      initialRoute: '/xiMain',
+      initialRoute: '/xi',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -88,9 +90,11 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Hill = [
-  GetPage(name: '/xiMain', page: () =>XiMainPage(),binding: XiMainBinding()),
-  GetPage(name: '/xiFirst', page: () =>XiFirstPage(),binding: XiFirstBinding()),
-  GetPage(name: '/xiSecond', page: () =>XiSecondPage(),binding: XiSecondBinding()),
-  GetPage(name: '/xiCuttingInput', page: () =>XiCuttingInputPage(),binding: XiCuttingInputBinding()),
-  GetPage(name: '/xiCuttingResult', page: () =>XiCuttingResultPage(),binding: XiCuttingResultBinding()),
+  GetPage(name: '/xi', page: () => const XiWayView(),binding: XiWayBinding()),
+  GetPage(name: '/xiMain', page: () => XiMainPage(),binding: XiMainBinding()),
+  GetPage(name: '/xiWay', page: () => const XiReal()),
+  GetPage(name: '/xiFirst', page: () => XiFirstPage(),binding: XiFirstBinding()),
+  GetPage(name: '/xiSecond', page: () => XiSecondPage(),binding: XiSecondBinding()),
+  GetPage(name: '/xiCuttingInput', page: () => XiCuttingInputPage(),binding: XiCuttingInputBinding()),
+  GetPage(name: '/xiCuttingResult', page: () => XiCuttingResultPage(),binding: XiCuttingResultBinding()),
 ];

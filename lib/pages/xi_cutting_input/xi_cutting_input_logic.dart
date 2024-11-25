@@ -1,7 +1,6 @@
 import 'package:cutting/db_xi/cutting_entity.dart';
 import 'package:cutting/db_xi/db_xi.dart';
 import 'package:cutting/db_xi/result_entity.dart';
-import 'package:cutting/router/router_titles.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -60,7 +59,7 @@ class XiCuttingInputLogic extends GetxController {
         resultSecond: '${entity!.modThird}',
         resultThird: '$resultNum%',
     resultFourth: '${100-resultNum}%');
-    Get.toNamed(RouterTitles.xiCuttingResult, arguments: resultEntity);
+    Get.toNamed('/xiCuttingResult', arguments: resultEntity);
   }
 
   @override

@@ -11,8 +11,8 @@ class XiWayView extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.bosco.value
-              ? const CircularProgressIndicator(color: Colors.blue)
+          () => controller.hackett.value
+              ? const CircularProgressIndicator(color: Colors.deepPurpleAccent)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class XiWayView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.cqpjw();
+              controller.zqsdjlc();
             },
             icon: const Icon(
               Icons.restart_alt,

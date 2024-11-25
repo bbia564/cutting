@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../router/router_titles.dart';
 import 'xi_first_logic.dart';
 
 class XiFirstPage extends GetView<XiFirstLogic> {
@@ -22,7 +21,7 @@ class XiFirstPage extends GetView<XiFirstLogic> {
               color: primaryColor,
             ).marginOnly(right: 20),
             onTap: () {
-              Get.toNamed(RouterTitles.xiCuttingInput)?.then((_) {
+              Get.toNamed('/xiCuttingInput')?.then((_) {
                 controller.getData();
               });
             },
@@ -43,7 +42,7 @@ class XiFirstPage extends GetView<XiFirstLogic> {
                     return GestureDetector(
                       child: CuttingItem(entity),
                       onTap: () {
-                        Get.toNamed(RouterTitles.xiCuttingInput,
+                        Get.toNamed('/xiCuttingInput',
                                 arguments: entity)
                             ?.then((_) {
                           controller.getData();

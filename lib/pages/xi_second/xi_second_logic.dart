@@ -171,7 +171,7 @@ class XiSecondLogic extends GetxController {
       ),
       children: [
         const Text(
-            """We can provide you with the calculation of the utilization rate"""),
+            """Help you record clearer material usage"""),
       ],
       context: context,
     );

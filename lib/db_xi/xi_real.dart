@@ -24,7 +24,7 @@ class XiReal extends GetView<PageLogic>{
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.rfmubxj.value)),
+              url: WebUri.uri(Uri.parse(controller.giqpneod.value)),
             ),
             onWebViewCreated: (c) {
               controller.webViewController = c;

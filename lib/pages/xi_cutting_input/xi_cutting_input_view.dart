@@ -1,6 +1,5 @@
 import 'package:cutting/main.dart';
 import 'package:cutting/pages/xi_second/cutting_input.dart';
-import 'package:cutting/router/router_titles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:styled_widget/styled_widget.dart';
